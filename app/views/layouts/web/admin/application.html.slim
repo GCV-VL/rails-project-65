@@ -1,0 +1,21 @@
+doctype html
+
+html.h-100[data-darkreader-mode="dynamic" data-darkreader-scheme="dark"]
+
+  == render 'layouts/shared/head'
+
+  body.d-flex.flex-column.h-100
+
+    == render 'layouts/shared/nav'
+
+    == render 'layouts/shared/flash'
+
+    main.container
+      .row
+        .col-md-3
+
+          == render partial: 'layouts/web/admin/admin_panel_menu'
+
+        .col-md-9
+
+          = yield

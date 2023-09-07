@@ -1,0 +1,17 @@
+h1.h2.mb-4
+  = t('.title')
+= link_to t('.add_category'), new_admin_category_path
+.row.mt-2
+  table.table.table-borderless
+    thead
+      tr
+        th
+          = t('.name')
+        th
+          = t('.category_ads_count')
+        th
+          = t('.actions')
+    tbody
+      == render @categories
+
+== paginate @categories, remote: true

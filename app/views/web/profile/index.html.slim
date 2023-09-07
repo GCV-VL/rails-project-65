@@ -1,0 +1,26 @@
+.mb-4
+  h2
+    = t('.my_bulletins')
+  hr
+
+= link_to t('.add_bulletin'), new_bulletin_path
+
+== render partial: 'search_form', locals: { url: profile_url }
+
+.row.mt-2
+  table.table.table-borderless
+    thead
+      tr
+        th
+          = t('.title')
+        th
+          = t('.state')
+        th
+          = t('.publish_date')
+        th
+          = t('.actions')
+    tbody
+
+      == render partial: 'bulletin', collection: @bulletins
+
+== paginate @bulletins, remote: true

@@ -1,0 +1,18 @@
+h1.h2.mb-4
+  = t('.ads_on_moderation')
+
+.row.mt-2
+  table.table.table-borderless
+    thead
+      tr
+        th
+          = t('.title')
+        th
+          = t('.publish_date')
+        th
+          = t('.actions')
+    tbody
+
+      == render partial: 'bulletin', collection: @bulletins
+
+== paginate @bulletins, remote: true

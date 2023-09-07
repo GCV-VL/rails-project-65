@@ -1,0 +1,10 @@
+- common_classes = 'nav-link link-dark'
+- menu_items = [{ title: t('.ads_on_moderation'), url: admin_url },
+                { title: t('.all_ads'), url: admin_bulletins_url },
+                { title: t('.categories'), url: admin_categories_url },
+                { title: t('.users'), url: admin_users_url }]
+
+ul.nav.flex-column.nav-pills
+  - menu_items.each do |item|
+    li.nav-item
+      = link_to item[:title], item[:url], class: class_names(common_classes, { active: current_page?(item[:url]) })

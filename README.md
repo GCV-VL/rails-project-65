@@ -5,7 +5,7 @@
 
 Bulletin board is a service where you can post ads and search for existing ones. Each ad is pre-moderated by the service administrators. Administrators can return an ad for revision, publish it, or archive it.
 
-(production deployed on [railway](https://GCV-VL-rails-bulletin-board.up.railway.app/))
+(production deployed on [render](https://bulletin-board-ztlu.onrender.com/))
 
 ## Local installation
 ```

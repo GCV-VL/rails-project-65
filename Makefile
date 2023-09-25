@@ -39,6 +39,7 @@ test-all:
 	MOZ_HEADLESS=1 bin/rails test:all
 
 test-all-coverage:
+	bin/rails db:environment:set RAILS_ENV=test
 	rm -rf coverage
 	COVERAGE=1 make test-all
 

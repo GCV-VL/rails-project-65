@@ -8,7 +8,7 @@ module Web
       private
 
       def authorize_admin
-        return redirect_to root_path, alert: t('user_not_admin') unless current_user&.admin?
+        redirect_to root_path, alert: t('user_not_admin') unless current_user&.admin?
       end
     end
   end

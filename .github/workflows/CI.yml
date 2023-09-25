@@ -28,9 +28,7 @@ jobs:
 
     - name: Run tests & publish code coverage
       # https://github.com/paambaati/codeclimate-action
-      uses: paambaati/codeclimate-action@v3.2.0
-      env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      uses: MartinNuc/codeclimate-action@1
       with:
         coverageCommand: make test-all-coverage
         debug: false

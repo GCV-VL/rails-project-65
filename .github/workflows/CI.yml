@@ -26,12 +26,12 @@ jobs:
     - name: Install dependencies
       run: make install-without-production
 
-    - name: Run tests & publish code coverage
-      # https://github.com/paambaati/codeclimate-action
-      uses: MartinNuc/codeclimate-action@1
-      with:
+#    - name: Run tests & publish code coverage
+#      # https://github.com/paambaati/codeclimate-action
+#      uses: MartinNuc/codeclimate-action@1
+#      with:
 #        coverageCommand: make test-all-coverage
-        debug: false
+#        debug: false
 
     - name: Run linters
       run: make lint

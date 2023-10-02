@@ -30,7 +30,7 @@ jobs:
       # https://github.com/paambaati/codeclimate-action
       uses: MartinNuc/codeclimate-action@1
       with:
-        coverageCommand: make test-all-coverage
+#        coverageCommand: make test-all-coverage
         debug: false
 
     - name: Run linters

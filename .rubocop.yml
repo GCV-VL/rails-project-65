@@ -39,3 +39,6 @@ Style/RedundantReturn:
 
 Style/ArgumentsForwarding:
   Enabled: false
+
+Rails/CreateTableWithTimestamps:
+  Enabled: false

@@ -95,6 +95,6 @@ gem 'omniauth-rails_csrf_protection'
 gem 'pundit', '~> 2.3'
 gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'main'
 gem 'rollbar'
+gem 'rubocop-rails', require: false
 gem 'simple_form'
 gem 'slim-rails'
-gem 'rubocop-rails', require: false

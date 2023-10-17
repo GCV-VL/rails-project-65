@@ -6,7 +6,7 @@ class BulletinPolicy < ApplicationPolicy
       if user.admin?
         scope.all
       else
-        scope.where(user: user).or(scope.published)
+        scope.where(user:).or(scope.published)
       end
     end
   end

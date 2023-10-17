@@ -1,12 +1,22 @@
 # frozen_string_literal: true
 
 class BulletinPolicy < ApplicationPolicy
+  class Scope < Scope
+    def resolve
+      if user.admin?
+        scope.all
+      else
+        scope.where(user: user).or(scope.published)
+      end
+    end
+  end
+
   def index?
     true
   end
 
   def show?
-    true
+    record.published? || record.user == user || user.admin?
   end
 
   def create?

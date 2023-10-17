@@ -17,7 +17,7 @@ gem 'sqlite3', '~> 1.4'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
-# Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
+# Bundle and transpile JavaScipt [https://github.com/rails/jsbundling-rails]
 gem 'jsbundling-rails'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
@@ -58,7 +58,6 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
   # gem 'faker'
-  gem 'rubocop-rails', require: false
 end
 
 group :development do
@@ -98,3 +97,4 @@ gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'main'
 gem 'rollbar'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'rubocop-rails', require: false
